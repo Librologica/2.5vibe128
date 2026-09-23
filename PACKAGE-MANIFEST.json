@@ -1,0 +1,55 @@
+{
+  "name": "2.5vibe128",
+  "version": "1.0.0",
+  "platform": "c128",
+  "backend": "mono-portals",
+  "viewport": [
+    128,
+    144
+  ],
+  "scenes": [
+    "demo2-original",
+    "demo2-optimized"
+  ],
+  "runs": [
+    "auto",
+    "interactive"
+  ],
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "documentationLicense": "CC-BY-NC-4.0",
+  "builderSHA256": "E5AD17F7DB8C54DD351919BBA93FBCB43F31A0D6BA775D4A7F6B31800E611966",
+  "nativeAdapterSHA256": "5D2D87A5F875E0C088B95AEE5AE808F140FB11587039F07CD58C35DB1368C137",
+  "sourceTreeSHA256": "6745ACB67CE2658C491FB9EB3C3B9857990307D0E115AB278212AFDEFDD709BB",
+  "sourceTreeHashMethod": "SHA256 of sorted src/ file lines: uppercase SHA256, two spaces, POSIX relative path, LF",
+  "demos": {
+    "demos/demo2-original-auto.prg": "6EDC5A176E8B60526FB523997073D19A109E1295A11703354E5D76BA1BE85E30",
+    "demos/demo2-original-interactive.prg": "EEF9D8BCEA9BFAC2FAB2592698ABDFE936BF734EDEAF1ADBBD2A9F81D8001EB9",
+    "demos/demo2-optimized-auto.prg": "0B51C9B8BFC78D29C2057D327AC3A52963453F732220B22DD28E384FFAA716FC",
+    "demos/demo2-optimized-interactive.prg": "20C40A48A34BFCDE7EC22FE68DB6C31CAC467BA866C5C16EBA5EA286D8305AD4"
+  },
+  "manifest": "MANIFEST.sha256",
+  "manifestScope": "All permanent files except MANIFEST.sha256 itself",
+  "permanentFiles": 100,
+  "hardwareQualification": "Not tested on real hardware",
+  "nativeEmulators": {
+    "version": "VICE 3.10",
+    "standards": [
+      "PAL",
+      "NTSC"
+    ],
+    "stock": true
+  },
+  "qualification": {
+    "nativeViews": 960,
+    "CPUModelViews": 128,
+    "physicalCaptures": 16,
+    "keyboardCases": 20,
+    "bitmapDifferences": 0,
+    "physicalPixelDifferences": 0,
+    "joystick": "code present, not automatically tested"
+  },
+  "buildTools": {
+    "Python": "3.10+ (qualified 3.13.14)",
+    "64tass": "qualified 1.60.3243"
+  }
+}
