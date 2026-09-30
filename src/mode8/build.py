@@ -62,7 +62,7 @@ def validate(data,route=True):
     syntax(data)
     try:c=contract(data)
     except (AssertionError,KeyError,TypeError,IndexError,RecursionError) as e:raise ValueError('GEOMETRY: '+str(e)) from e
-    require(c['backend']=='mono-portals','NATIVE_BACKEND','1.0.0 supports single-level mono-portals only')
+    require(c['backend']=='mono-portals','NATIVE_BACKEND','Fixed-map SDK supports single-level mono-portals only; procedural demo has a separate entry point')
     family=FAMILIES[c['backend']]
     reference=load(SOURCE/'templates.json')[family]
     # Source templates retain camera initialization and qualified mono itineraries.
