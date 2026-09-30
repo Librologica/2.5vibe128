@@ -1,0 +1,9 @@
+{
+  "bootstrap": "2.5Vibe128-VICII",
+  "sha256": "D46AB56F3C5731BB15A7C8A7EA8F3A9D320AA036882DE929FB1E5B37643999C2",
+  "scene": null,
+  "entryPoint": "../../../build_infinite.py",
+  "run": "auto",
+  "seed": null,
+  "world": "../../../src/infinite/world.py"
+}
