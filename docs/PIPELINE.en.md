@@ -1,6 +1,6 @@
 # 2.5D pipeline
 
-## Version 1.0.0 scope
+## Version 1.1.0 scope
 
 Standalone software renderer derived from the mono-portals backend of
 3Dvibe64 1.4.0 Mode 8. This distribution promotes only the native single-level
@@ -8,6 +8,13 @@ demo-2 path with static openings. Polygon modes 1–7, unqualified multilevel
 ports and VDC are not included. The historical `mode8` module/schema names
 retain compatibility, not additional public graphics modes. There is no
 `GraphicsMode=2.5` option.
+
+The fixed-map contract below is unchanged. Version 1.1.0 promotes the C64
+1.5.5 lintel fixes: clear camera-inside state after upper-volume exit and
+include front-plane identity in discontinuity detection. The independent
+oracle tracks those planes too. Native video/clock adapters are retained.
+The separate procedural demo is documented in [INFINITE](INFINITE.en.md);
+its larger map and multiple lintels do not change the fixed-map parser.
 
 ## World to pixels
 

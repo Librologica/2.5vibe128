@@ -1,6 +1,7 @@
 # Memoria e piattaforma
 
-Indirizzi esadecimali. Nessuna modifica al layout geometrico qualificato.
+Indirizzi esadecimali. Sotto il layout delle mappe fisse; la demo procedurale
+ha una [mappa memoria separata](INFINITE.it.md). Confini delle regioni invariati.
 
 | Range | Allocation |
 |---|---|
@@ -8,7 +9,7 @@ Indirizzi esadecimali. Nessuna modifica al layout geometrico qualificato.
 | 0002–00EC | Renderer, navigation, IRQ state/scratch |
 | 0100–01FF | CPU stack |
 | 0200–07FF | Lookup RAM after temporary loader completes |
-| 0801–2E73 auto / 0801–2C71 interactive | Low program; 140 / 654 bytes before 2F00 |
+| 0801–2E87 auto / 0801–2C85 interactive | Low program; 120 / 634 bytes before 2F00 |
 | 2F00–3BFF | Ray, edge, refinement and projection workspace |
 | 3C00–3FFF | 32×32 solid map |
 | 4400–57FF | Geometry/lookups/fill masks/navigation data |
@@ -27,7 +28,7 @@ Indirizzi esadecimali. Nessuna modifica al layout geometrico qualificato.
 
 CPU 8502, BASIC 7, nessun GO64. Bank 0 + I/O ($FF00=$3E), $D506=$0F
 configura 16 KB common ad entrambe le estremità. Il secondo banco non è
-necessario al renderer 1.0.0: non viene dichiarata un'accelerazione da RAM1.
+necessario al renderer: non viene dichiarata un'accelerazione da RAM1.
 Non usa Z80 o VDC. Due banche video VIC tramite $DD00, Screen RAM
 $4000/$CC00, font $5800/$D800, bitmap $6000/$E000. $D018 seleziona layout;
 Color RAM è inizializzata una volta, salvo UI che aggiorna codici schermo.

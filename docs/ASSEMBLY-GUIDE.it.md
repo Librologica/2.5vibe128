@@ -4,6 +4,11 @@ Python istanzia template e dati; 64tass assembla istruzioni documentate 6502
 compatibili con la CPU nativa. Non viene compilato C. ABI privato, non
 rientrante: non cambiare ZP, stack, ordine delle fasi o indirizzi senza test.
 
+La demo infinita usa `build_infinite.py` e `src/infinite`, non il generatore
+delle mappe fisse. Riusa bootstrap/IRQ/input nativi, con controlli espliciti
+sulle sovrapposizioni mappa/font. Vedere [INFINITE](INFINITE.it.md). Gli snapshot
+ASM nativi delle sei demo si ricompilano con il comando sotto.
+
 Label principali: init_video_standard, consume_video_ticks, simulation_tick,
 latch_pose, raycast_layers, select_strips, compose_screen, render_frame_begin,
 render_frame_end, fps_frame_done, presentation_done. init e IRQ sono specifici

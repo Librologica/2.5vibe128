@@ -1,6 +1,7 @@
 # Memory and platform
 
-Hexadecimal addresses. Qualified geometry layout preserved.
+Hexadecimal addresses. Fixed-map layout below; the new procedural demo has
+a separate [memory map](INFINITE.en.md). Qualified region boundaries preserved.
 
 | Range | Allocation |
 |---|---|
@@ -8,7 +9,7 @@ Hexadecimal addresses. Qualified geometry layout preserved.
 | 0002–00EC | Renderer, navigation, IRQ state/scratch |
 | 0100–01FF | CPU stack |
 | 0200–07FF | Lookup RAM after temporary loader completes |
-| 0801–2E73 auto / 0801–2C71 interactive | Low program; 140 / 654 bytes before 2F00 |
+| 0801–2E87 auto / 0801–2C85 interactive | Low program; 120 / 634 bytes before 2F00 |
 | 2F00–3BFF | Ray, edge, refinement and projection workspace |
 | 3C00–3FFF | 32×32 solid map |
 | 4400–57FF | Geometry/lookups/fill masks/navigation data |
@@ -27,7 +28,7 @@ Hexadecimal addresses. Qualified geometry layout preserved.
 
 8502 CPU, BASIC 7, no GO64. Bank 0 + I/O ($FF00=$3E), $D506=$0F selects
 16-KB common RAM at both ends. The second bank is not required by this
-1.0.0 renderer; no RAM1 performance gain is claimed. No Z80 or VDC use.
+renderer; no RAM1 performance gain is claimed. No Z80 or VDC use.
 Two VIC banks via $DD00, Screen RAM $4000/$CC00, fonts $5800/$D800,
 bitmaps $6000/$E000. $D018 selects layout. Color RAM initializes once;
 UI updates screen glyph codes. Fixed VIC-II 0/9/8/7 palette, orientation

@@ -5,6 +5,11 @@ instructions compatible with the native CPU. No C compiler is involved.
 Private, non-reentrant ABI: do not change ZP, stack, phase order or addresses
 without tests.
 
+The infinite demo uses `build_infinite.py` and `src/infinite`, not the fixed-map
+template generator. It reuses native bootstrap/IRQ/input helpers, with explicit
+map/font overlap guards. See [INFINITE](INFINITE.en.md). Complete native ASM
+snapshots of all six demos can be rebuilt with the command below.
+
 Main labels: init_video_standard, consume_video_ticks, simulation_tick,
 latch_pose, raycast_layers, select_strips, compose_screen, render_frame_begin,
 render_frame_end, fps_frame_done, presentation_done. Init/IRQ are platform

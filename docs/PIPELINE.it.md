@@ -1,6 +1,6 @@
 # Pipeline 2.5D
 
-## Perimetro della 1.0.0
+## Perimetro della 1.1.0
 
 Renderer software autonomo derivato dal backend mono-portals della Mode 8 di
 3Dvibe64 1.4.0. Questa distribuzione contiene solo il percorso nativo
@@ -8,6 +8,14 @@ monolivello con aperture statiche della demo 2. Non contiene le modalità
 poligonali 1–7 e non promuove porting multilivello o VDC non qualificati.
 Il nome storico del modulo `mode8` e dello schema JSON conserva compatibilità,
 non seleziona altre modalità grafiche. Non si usa `GraphicsMode=2.5`.
+
+Il contratto delle mappe fisse descritto sotto rimane invariato. La 1.1.0
+promuove le correzioni architravi C64 1.5.5: azzera lo stato camera-interna
+dopo l'uscita dal volume superiore e considera il piano frontale nelle
+discontinuità. Anche l'oracolo indipendente segue questi piani. Restano gli
+adattatori nativi video/clock. La demo procedurale separata è descritta in
+[INFINITE](INFINITE.it.md): mappa maggiore e architravi multiple non cambiano
+il parser delle mappe fisse.
 
 ## Dal mondo ai pixel
 
