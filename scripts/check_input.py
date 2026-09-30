@@ -11,7 +11,7 @@ def check(build,standard):
     if build.is_relative_to(ROOT):raise ValueError('Use an external build directory')
     cfg=json.loads((build/'build.json').read_text())
     assert cfg['run']=='interactive'
-    c128=cfg['project']=='2.5vibe128'
+    c128=cfg.get('project',cfg.get('package'))=='2.5vibe128'
     source=build/f'qualification-{standard}/frame-003.vsf'
     b=source.read_bytes();idx=b.index(b'KEYBOARD');data=idx+22
     assert b[idx+16:idx+18]==bytes([1,1]) and int.from_bytes(b[idx+18:idx+22],'little')==118
@@ -36,7 +36,7 @@ def check(build,standard):
         cmd=[str(VICE),'-default','+confirmonexit','-console','-warp']
         cmd+=['+go64','-40col','-VICIIfilter','0'] if c128 else ['-model','plus4','-TEDfilter','0']
         cmd+=['-'+standard,'-autostartprgmode','1','-initbreak','0x1c0d' if c128 else '0x100d',
-              '-moncommands',str(out/'run.mon'),'-limitcycles','200000000',str(build/cfg['outputPRG'])]
+              '-moncommands',str(out/'run.mon'),'-limitcycles','200000000',str(build/cfg.get('outputPRG','native/'+('2.5Vibe128-VICII.prg' if c128 else '2.5VibePlus4.prg')))]
         startup=None
         if os.name=='nt':
             startup=subprocess.STARTUPINFO();startup.dwFlags|=subprocess.STARTF_USESHOWWINDOW;startup.wShowWindow=0

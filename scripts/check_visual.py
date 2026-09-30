@@ -39,7 +39,12 @@ def visual(build,standard='pal',frame=3):
         r=memory(out/'published.vsf')[1]
     else:r=(out/'published.bin').read_bytes()
     pose=[int.from_bytes(r[a:a+2],'little') for a in (38,40,42)]
-    pix=setup(b)[1](pose)[1];im=Image.open(out/'screen.png').convert('RGB')
+    if json.loads((b/'build.json').read_text()).get('demo')=='infinite':
+        from qualify_infinite import Oracle
+        bitmap=Oracle(b/'native').view(r)
+        pix=[(bitmap[0x2a0+(y//8)*320+(x//4)*8+(y&7)]>>(6-2*(x&3)))&3 for y in range(144) for x in range(128)]
+    else:pix=setup(b)[1](pose)[1]
+    im=Image.open(out/'screen.png').convert('RGB')
     top=(75 if standard=='pal' else 63) if c128 else (80 if standard=='pal' else 58)
     left=64;palette={};bad=[]
     for y in range(144):
