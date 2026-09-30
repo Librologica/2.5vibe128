@@ -7,6 +7,7 @@ sys.path[:0]=[str(ROOT),str(ROOT/'src')]
 from build import build
 from mode8.build import validate,load
 from mode8.font import font
+from test_infinite import InfiniteContracts
 BASE=load(ROOT/'examples/demo2-original.json')
 
 
