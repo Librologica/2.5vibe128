@@ -1,7 +1,7 @@
 # Avvio rapido — 2.5vibe128
 
 Estrarre lo ZIP in una cartella. Non servono altri checkout di 3Dvibe64.
-Per giocare usare i quattro PRG in demos, senza compilare. Scegliere x128,
+Per giocare usare i sei PRG in demos, senza compilare. Scegliere x128,
 Commodore 128 / VIC-IIe, configurazione stock e standard PAL/NTSC.
 
 C128: modalità nativa 40 colonne, **non GO64**, uscita VIC-IIe.
@@ -18,6 +18,16 @@ python -B build.py --scene examples/demo2-original.json --run interactive --out 
 python -B build.py --scene examples/demo2-optimized.json --run auto --out ../2.5vibe128-optimized-auto
 python -B build.py --scene examples/demo2-optimized.json --run interactive --out ../2.5vibe128-optimized-interactive
 ```
+
+Demo infinita (generatore specializzato separato, non JSON delle mappe fisse):
+
+```sh
+python -B build_infinite.py --run auto --out ../2.5vibe128-infinite-auto
+python -B build_infinite.py --run interactive --out ../2.5vibe128-infinite-interactive
+```
+
+Entrambe senza musica. Aggiungere `--seed 0x12345678` per riprodurre il mondo;
+il default campiona lo stato all'avvio. Vedere [Mondo infinito](docs/INFINITE.it.md).
 
 Le cartelle output devono essere nuove ed esterne all’SDK. La build produce
 PRG, ASM, label, listing, log e scena; gli intermedi restano nell’output.

@@ -38,6 +38,15 @@ Warp accelera solo l'host. C128 misura clock phi1; Plus/4 clock master TED.
 Contatori grezzi non confrontabili come cicli CPU. FPS e p95 dipendono dal tratto;
 non confondere la finestra iniziale con un intero giro o un minimo garantito.
 
+## Demo infinita
+
+`tests/test_release.py` esegue anche i contratti host/build procedurali.
+Vedere [INFINITE](docs/INFINITE.it.md) per il runner di qualificazione separato.
+Controlla 120 viste per run/standard, mappa RAM, renderer neutro a pari posa,
+font/palette, UI, registri e pubblicazione. Applicare anche i test visivi e
+tastiera alle build infinite. Per i benchmark confrontare seed fissi: avvii
+con seed variabile possono esplorare geometrie differenti.
+
 ## Hardware reale — non eseguito
 
 Provare macchina stock PAL/NTSC, annotare revisione, loader e uscita video.

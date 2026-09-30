@@ -38,6 +38,15 @@ Warp accelerates host time only. C128 measures phi1 clocks; Plus/4 measures
 TED master clocks. Raw counts are not comparable CPU cycles. FPS/p95 depend
 on route segment; the initial window is not a whole tour or guaranteed minimum.
 
+## Infinite demo
+
+`tests/test_release.py` also runs the procedural host/build contracts.
+See [INFINITE](docs/INFINITE.en.md) for the separate native qualification runner.
+It checks 120 views per run/standard, world RAM, same-pose neutral renderer,
+font/palette, UI, registers and publication order. Use the existing visual and
+keyboard checks on infinite builds too. Compare fixed seeds for benchmarks;
+variable-seed boot runs can traverse different geometry.
+
 ## Real hardware — not performed
 
 Test stock PAL/NTSC hardware; record revision, loader and video output. Load

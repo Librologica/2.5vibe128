@@ -1,7 +1,7 @@
 # Quickstart — 2.5vibe128
 
 Extract the ZIP. No other 3Dvibe64 checkout is required. To play, use the
-four demos/ PRGs without building. Select x128, Commodore 128 / VIC-IIe, stock machine
+six demos/ PRGs without building. Select x128, Commodore 128 / VIC-IIe, stock machine
 and PAL/NTSC video standard.
 
 C128: native 40-column mode, **not GO64**, VIC-IIe output.
@@ -18,6 +18,16 @@ python -B build.py --scene examples/demo2-original.json --run interactive --out 
 python -B build.py --scene examples/demo2-optimized.json --run auto --out ../2.5vibe128-optimized-auto
 python -B build.py --scene examples/demo2-optimized.json --run interactive --out ../2.5vibe128-optimized-interactive
 ```
+
+Infinite demo (separate specialized generator, not fixed-map JSON):
+
+```sh
+python -B build_infinite.py --run auto --out ../2.5vibe128-infinite-auto
+python -B build_infinite.py --run interactive --out ../2.5vibe128-infinite-interactive
+```
+
+Both are silent. Add `--seed 0x12345678` for a reproducible world; default
+samples startup state. See [Infinite world](docs/INFINITE.en.md).
 
 Output directories must be new and outside SDK. Build emits PRG, ASM,
 labels, listing, log and scene; intermediates stay in output. Validation-only

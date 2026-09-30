@@ -1,6 +1,6 @@
 {
   "name": "2.5vibe128",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "platform": "c128",
   "backend": "mono-portals",
   "viewport": [
@@ -19,17 +19,19 @@
   "documentationLicense": "CC-BY-NC-4.0",
   "builderSHA256": "E5AD17F7DB8C54DD351919BBA93FBCB43F31A0D6BA775D4A7F6B31800E611966",
   "nativeAdapterSHA256": "5D2D87A5F875E0C088B95AEE5AE808F140FB11587039F07CD58C35DB1368C137",
-  "sourceTreeSHA256": "6745ACB67CE2658C491FB9EB3C3B9857990307D0E115AB278212AFDEFDD709BB",
+  "sourceTreeSHA256": "862A3F77FE6D2EF57F1865CD244F71D194912A3933B436E697C3A87C63E35979",
   "sourceTreeHashMethod": "SHA256 of sorted src/ file lines: uppercase SHA256, two spaces, POSIX relative path, LF",
   "demos": {
-    "demos/demo2-original-auto.prg": "6EDC5A176E8B60526FB523997073D19A109E1295A11703354E5D76BA1BE85E30",
-    "demos/demo2-original-interactive.prg": "EEF9D8BCEA9BFAC2FAB2592698ABDFE936BF734EDEAF1ADBBD2A9F81D8001EB9",
-    "demos/demo2-optimized-auto.prg": "0B51C9B8BFC78D29C2057D327AC3A52963453F732220B22DD28E384FFAA716FC",
-    "demos/demo2-optimized-interactive.prg": "20C40A48A34BFCDE7EC22FE68DB6C31CAC467BA866C5C16EBA5EA286D8305AD4"
+    "demos/demo2-optimized-auto.prg": "6DC6C41B9D2B2FDFD22DB7D4FF2F38EEEBCAFD5E363CE7FA488C653B2071CB21",
+    "demos/demo2-optimized-interactive.prg": "D619375F2098F339E360A3B432A84469F5E2D8BB9A47D381B6747E43FDEE6ADB",
+    "demos/demo2-original-auto.prg": "BE51BA78AB5350E4EE34E1D53F84AAB2DD8C3AB8502220AB29D0359CC839308E",
+    "demos/demo2-original-interactive.prg": "2E531777FCF50266D74530102353A502E1624BAE2F9C15905BF7A8A8AD4355C8",
+    "demos/infinite-auto.prg": "D46AB56F3C5731BB15A7C8A7EA8F3A9D320AA036882DE929FB1E5B37643999C2",
+    "demos/infinite-interactive.prg": "1870A85EF38BD12A18151C30F4BAB51E126CEC81A6E552A6BBC2523AFAD2781B"
   },
   "manifest": "MANIFEST.sha256",
   "manifestScope": "All permanent files except MANIFEST.sha256 itself",
-  "permanentFiles": 100,
+  "permanentFiles": 145,
   "hardwareQualification": "Not tested on real hardware",
   "nativeEmulators": {
     "version": "VICE 3.10",
@@ -40,10 +42,11 @@
     "stock": true
   },
   "qualification": {
-    "nativeViews": 960,
+    "nativeViews": 1440,
+    "extraFixedSeedViews": 240,
     "CPUModelViews": 128,
-    "physicalCaptures": 16,
-    "keyboardCases": 20,
+    "physicalCaptures": 24,
+    "keyboardCases": 30,
     "bitmapDifferences": 0,
     "physicalPixelDifferences": 0,
     "joystick": "code present, not automatically tested"
@@ -51,5 +54,10 @@
   "buildTools": {
     "Python": "3.10+ (qualified 3.13.14)",
     "64tass": "qualified 1.60.3243"
-  }
+  },
+  "standaloneDemos": [
+    "infinite"
+  ],
+  "audio": false,
+  "infiniteBuilderSHA256": "99555F4DB56D9A612FD9F7DDE2631ACB5DDA545A467A35BC97C7D338CB833243"
 }
